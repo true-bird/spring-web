@@ -10,6 +10,5 @@ public class SampleController {
     @GetMapping("/doA")
     public void doA(){
         System.out.println("DDD");
-        // test
     }
 }
