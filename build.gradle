@@ -16,5 +16,15 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-context', version: '5.0.7.RELEASE'
     compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.7.RELEASE'
     compile group: 'log4j', name: 'log4j', version: '1.2.17'
-    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+    // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.7.4'
+    compile files('libs/ojdbc8.jar')
+
+
+
 }
