@@ -1,7 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gradle
 .idea
-
 ### Java template
 # Compiled class file
 *.class
@@ -114,6 +113,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .gradle/6.1.1/vcsMetadata-1/
+build/
 build/generated/
 build/tmp/compileJava/
 src/test/
