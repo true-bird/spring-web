@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.truebird.persistence.TimeMapperTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-08-23T09:51:26" hostname="kakao-entui-MacBookPro-3.local" time="0.146">
+  <properties/>
+  <testcase name="testGetTime2" classname="org.truebird.persistence.TimeMapperTests" time="0.143"/>
+  <testcase name="testGetTime" classname="org.truebird.persistence.TimeMapperTests" time="0.003"/>
+  <system-out><![CDATA[INFO  TimeMapperTests:28 - getTime2
+INFO  TimeMapperTests:29 - 2020-08-23 09:51:26
+INFO  TimeMapperTests:22 - com.sun.proxy.$Proxy25
+INFO  TimeMapperTests:23 - 2020-08-23 09:51:26
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>
