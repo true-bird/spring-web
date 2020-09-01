@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 import java.io.IOException;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.truebird.controller"})
+@ComponentScan(basePackages = {"org.truebird.controller", "org.truebird.exception"})
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override
@@ -37,13 +37,9 @@ public class ServletConfig implements WebMvcConfigurer {
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();
 
         resolver.setMaxUploadSize(1024 * 1024 * 10);
-
         resolver.setMaxUploadSizePerFile(1024 * 1024 * 2);
-
         resolver.setMaxInMemorySize(1024 * 1024);
-
         resolver.setUploadTempDir(new FileSystemResource("/Users/kakao_ent/upload/tmp"));
-
         resolver.setDefaultEncoding("UTF-8");
 
         return resolver;
