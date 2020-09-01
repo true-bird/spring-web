@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.truebird.domain.SampleDTO;
 import org.truebird.domain.SampleDTOList;
 import org.truebird.domain.TodoDTO;
@@ -115,5 +116,18 @@ public class SampleController {
         return new ResponseEntity<>(msg,headers, HttpStatus.OK);
     }
 
+    @GetMapping("/exUpload")
+    public void exUpload() {
+        log.info("/exUpload.........");
+    }
+
+    @PostMapping("/exUploadPost")
+    public void exUploadPost(ArrayList<MultipartFile> files) {
+        files.forEach(file -> {
+            log.info("-----------------------");
+            log.info("name: " + file.getOriginalFilename());
+            log.info("size: " + file.getSize());
+        });
+    }
 
 }
