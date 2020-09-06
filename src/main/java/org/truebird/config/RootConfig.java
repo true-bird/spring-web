@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"org.truebird.sample"})
+@ComponentScan(basePackages = {"org.truebird.sample", "org.truebird.service"})
 @MapperScan(basePackages = {"org.truebird.mapper"})
 public class RootConfig {
     @Bean

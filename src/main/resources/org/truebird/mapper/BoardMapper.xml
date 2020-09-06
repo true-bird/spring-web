@@ -30,7 +30,7 @@
     </select>
 
     <delete id="delete">
-        delete from tbl_board where bno = #{bno};
+        delete from tbl_board where bno = #{bno}
     </delete>
 
     <update id="update">
