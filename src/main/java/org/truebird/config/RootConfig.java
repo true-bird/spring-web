@@ -22,7 +22,7 @@ public class RootConfig {
         hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@localhost:1521:XE");
         hikariConfig.setUsername("book_ex");
         hikariConfig.setPassword("book_ex");
-
+        // 기본 maximum-pool-size 10
         return new HikariDataSource(hikariConfig);
     }
 
