@@ -34,15 +34,15 @@ public class BoardController {
 
         service.register(board);
 
-        rttr.addFlashAttribute("result", board.getBno()); // 새롭게 등록된 게시물의 번호를 같이 전
+        rttr.addFlashAttribute("result", board.getBno());
 
-        return "redirect:/board/list"; // 스프링 MVC가 내부적으로 response.sendRedirect() 처리
+        return "redirect:/board/list";
     }
 
-    @GetMapping("/get")
+    @GetMapping({"/get","/modify"})
     public void get(@RequestParam("bno") Long bno, Model model) {
 
-        log.info("/get");
+        log.info("/get or modify");
         model.addAttribute("board", service.get(bno));
     }
 
@@ -64,4 +64,10 @@ public class BoardController {
         }
         return "redirect:/board/list";
     }
+
+    @GetMapping("/register")
+    public void register() {
+
+    }
+
 }
