@@ -33,6 +33,13 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
+    public int getTotal(Criteria cri) {
+
+        log.info("get total count");
+        return mapper.getTotalCount(cri);
+    }
+
+    @Override
     public boolean modify(BoardVO board) {
 
         log.info("modify......" + board);
@@ -47,6 +54,8 @@ public class BoardServiceImpl implements BoardService {
 
         return mapper.delete(bno) == 1;
     }
+
+
 
 //    @Override
 //    public List<BoardVO> getList() {
