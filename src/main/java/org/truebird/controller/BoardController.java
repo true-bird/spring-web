@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.truebird.domain.BoardVO;
 import org.truebird.domain.Criteria;
+import org.truebird.domain.PageDTO;
 import org.truebird.service.BoardService;
 
 @Controller
@@ -33,6 +34,7 @@ public class BoardController {
 
         log.info("list " + cri);
         model.addAttribute("list",service.getList(cri));
+        model.addAttribute("pageMaker", new PageDTO(cri, 40));
     }
 
     @PostMapping("/register")
