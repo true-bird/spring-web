@@ -116,4 +116,3 @@ fabric.properties
 build/
 build/generated/
 build/tmp/compileJava/
-src/test/
