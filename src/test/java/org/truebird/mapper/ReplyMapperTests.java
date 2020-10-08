@@ -37,6 +37,15 @@ public class ReplyMapperTests {
     }
 
     @Test
+    public void testList2() {
+
+        Criteria cri = new Criteria(2, 10);
+        Long targetBno = bnoArr[1];
+        List<ReplyVO> replies = mapper.getListWithPaging(cri,targetBno);
+        replies.forEach(reply -> log.info(reply));
+    }
+
+    @Test
     public void testUpdate() {
 
         Long targetRno = 10L;
@@ -65,7 +74,7 @@ public class ReplyMapperTests {
     @Test
     public void testCreate() {
 
-        IntStream.rangeClosed(1, 10).forEach(i -> {
+        IntStream.rangeClosed(1, 50).forEach(i -> {
 
             ReplyVO vo = new ReplyVO();
 

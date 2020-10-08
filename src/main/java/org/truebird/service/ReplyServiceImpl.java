@@ -6,6 +6,7 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.truebird.domain.Criteria;
+import org.truebird.domain.ReplyPageDTO;
 import org.truebird.domain.ReplyVO;
 import org.truebird.mapper.ReplyMapper;
 
@@ -53,10 +54,11 @@ public class ReplyServiceImpl implements ReplyService {
     }
 
     @Override
-    public List<ReplyVO> getList(Criteria cri, Long bno) {
+    public ReplyPageDTO getList(Criteria cri, Long bno) {
 
         log.info("get Reply List of a Board " + bno);
-
-        return mapper.getListWithPaging(cri,bno);
+        int replyCnt = mapper.getCountByBno(bno);
+        List<ReplyVO> list = mapper.getListWithPaging(cri,bno);
+        return new ReplyPageDTO(replyCnt,list);
     }
 }
