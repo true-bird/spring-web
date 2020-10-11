@@ -8,11 +8,13 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"org.truebird.sample", "org.truebird.service"})
+@ComponentScan(basePackages = {"org.truebird.sample", "org.truebird.service", "org.truebird.aop"})
+@EnableAspectJAutoProxy
 @MapperScan(basePackages = {"org.truebird.mapper"})
 public class RootConfig {
     @Bean
