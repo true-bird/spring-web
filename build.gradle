@@ -10,6 +10,7 @@ sourceCompatibility = 1.8
 
 ext {
     springVersion = '5.0.7.RELEASE'
+    aspectjVersion = '1.9.0'
 }
 
 repositories {
@@ -23,6 +24,10 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/jstl
     compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    runtime group: 'org.aspectj', name: 'aspectjweaver', version: aspectjVersion
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+    compile group: 'org.aspectj', name: 'aspectjrt', version: aspectjVersion
 
     compile group: 'org.springframework', name: 'spring-test', version: springVersion
     compile group: 'org.springframework', name: 'spring-context', version: springVersion
